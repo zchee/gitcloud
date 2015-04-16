@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title OmniauthGithubSandbox
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %peek
+    %header
+      %nav
+        - if user_signed_in?
+          %span 'Logged in as'
+          %strong= current_user.email
+          = link_to 'Change profile', edit_user_registration_path
+          = link_to 'Logout', destroy_user_session_path, method: :delete
+        - else
+          = link_to 'Sign Up', new_user_registration_path
+          = link_to 'Login', new_user_session_path
+          = link_to 'Sign in with Twitter', user_omniauth_authorize_path(:twitter)
+          = link_to 'Sign in with GitHub', user_omniauth_authorize_path(:github)
+          rc
+    - if notice
+      %p.alert.alert-success= notice
+    - if alert
+      %p.alert.alert-danger= alert
+    = render 'peek/bar'
+    = yield
