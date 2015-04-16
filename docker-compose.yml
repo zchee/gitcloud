@@ -1,0 +1,21 @@
+app:
+  build: .
+  ports:
+    - '3000:3000'
+    - '2222:22'
+  volumes:
+    - .:/usr/src/app
+  links:
+    - db
+#    - redis
+
+db:
+  image: postgres:latest
+  ports:
+    - '5432:5432'
+
+#redis:
+#  image: redis:3.0.0
+#  ports:
+#    - '6379:6379'
+
