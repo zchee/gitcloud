@@ -11,3 +11,10 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore env file.
+.env
+.secret
+
+# Ignore node modules
+/node_modules
