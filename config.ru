@@ -2,3 +2,14 @@
 
 require ::File.expand_path('../config/environment', __FILE__)
 run Rails.application
+
+# https://www.airpair.com/ruby-on-rails/performance
+require 'unicorn/oob_gc'
+use(Unicorn::OobGC, 3)
+
+# https://github.com/tmm1/gctools/issues/11
+# require 'gctools/oobgc'
+# if defined?(Unicorn::HttpRequest)
+#   GC::OOB.run
+#   use(GC::OOB::UnicornMiddleware)
+# end
