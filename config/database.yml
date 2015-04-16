@@ -16,10 +16,12 @@
 #
 default: &default
   adapter: postgresql
+  host:     192.168.55.33
+  username: postgres
+  password: mysecretpassword
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  timeout: 5000
 
 development:
   <<: *default
@@ -29,7 +31,7 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: gitcloud
+  #username: cheshire
 
   # The password associated with the postgres role (username).
   #password:
@@ -78,8 +80,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: gitcloud_production
-  username: gitcloud
-  password: <%= ENV['GITCLOUD_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: gitcloud_production
+#   username: cheshire
+#   password: <%= ENV['CHESHIRE_DATABASE_PASSWORD'] %>
