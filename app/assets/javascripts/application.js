@@ -12,5 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require peek
+//= require peek/views/faraday
+//= require peek/views/performance_bar
+//= require peek/views/rblineprof
 //= require turbolinks
+//= require bootstrap
+//= require bootstrap-material-design
+//= require nprogress
+//= require nprogress-turbolinks
+//= require nprogress-ajax
 //= require_tree .
