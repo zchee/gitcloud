@@ -1,0 +1,40 @@
+{
+  "name": "Cheshire",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "description": "== README",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zchee/cheshire.git"
+  },
+  "author": "zchee <zcheeee@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/zchee/cheshire/issues"
+  },
+  "homepage": "https://github.com/zchee/cheshire",
+  "devDependencies": {
+    "browserify": "~> 6.3",
+    "browserify-incremental": "^1.5.0",
+    "immutable": "*",
+    "jest-cli": "*",
+    "jquery": "*",
+    "react": "^0.13.1",
+    "react-immutable-render-mixin": "*",
+    "react-intl": "*",
+    "react-tools": "*",
+    "reactify": "^1.1.0",
+    "reflux": "*"
+  },
+  "dependencies": {
+    "material-ui": "^0.7.3",
+    "material-ui-sass": "*",
+    "react-tap-event-plugin": "^0.1.6",
+    "reactable": "*"
+  }
+}
